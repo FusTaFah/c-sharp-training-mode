@@ -1,5 +1,6 @@
 ﻿using System.Windows.Input;
 using TrainingMode.Command;
+using TrainingMode.Iterator;
 
 namespace TrainingMode
 {
@@ -30,6 +31,13 @@ namespace TrainingMode
             #endregion
 
             #region Iterator
+
+            int[] elems = { 1, 2, 3, 4, 5, 6, 7 };
+            ArrayIterator iterat = new ArrayIterator(elems);
+            while (iterat.HasNext())
+            {
+                Console.WriteLine(iterat.Next().ToString());
+            }
 
             #endregion
         }

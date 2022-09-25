@@ -14,11 +14,12 @@ namespace TrainingMode.Iterator
         public ArrayIterator(int[] _array)
         {
             this.array = _array;
+            currentElement = 0;
         }
 
         public int Next()
         {
-            return array[++currentElement];
+            return array[currentElement++];
         }
 
         public bool HasNext()
